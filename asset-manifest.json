@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/panier-achats-pvt-gr1/static/css/main.07ec13ec.chunk.css",
-    "main.js": "/panier-achats-pvt-gr1/static/js/main.c3077e57.chunk.js",
-    "main.js.map": "/panier-achats-pvt-gr1/static/js/main.c3077e57.chunk.js.map",
+    "main.css": "/panier-achats-pvt-gr1/static/css/main.b8995bf4.chunk.css",
+    "main.js": "/panier-achats-pvt-gr1/static/js/main.0fa57fa3.chunk.js",
+    "main.js.map": "/panier-achats-pvt-gr1/static/js/main.0fa57fa3.chunk.js.map",
     "runtime-main.js": "/panier-achats-pvt-gr1/static/js/runtime-main.d6d1b23d.js",
     "runtime-main.js.map": "/panier-achats-pvt-gr1/static/js/runtime-main.d6d1b23d.js.map",
-    "static/js/2.5e66baaa.chunk.js": "/panier-achats-pvt-gr1/static/js/2.5e66baaa.chunk.js",
-    "static/js/2.5e66baaa.chunk.js.map": "/panier-achats-pvt-gr1/static/js/2.5e66baaa.chunk.js.map",
+    "static/js/2.48d9cf4e.chunk.js": "/panier-achats-pvt-gr1/static/js/2.48d9cf4e.chunk.js",
+    "static/js/2.48d9cf4e.chunk.js.map": "/panier-achats-pvt-gr1/static/js/2.48d9cf4e.chunk.js.map",
     "index.html": "/panier-achats-pvt-gr1/index.html",
-    "static/css/main.07ec13ec.chunk.css.map": "/panier-achats-pvt-gr1/static/css/main.07ec13ec.chunk.css.map",
-    "static/js/2.5e66baaa.chunk.js.LICENSE.txt": "/panier-achats-pvt-gr1/static/js/2.5e66baaa.chunk.js.LICENSE.txt"
+    "static/css/main.b8995bf4.chunk.css.map": "/panier-achats-pvt-gr1/static/css/main.b8995bf4.chunk.css.map",
+    "static/js/2.48d9cf4e.chunk.js.LICENSE.txt": "/panier-achats-pvt-gr1/static/js/2.48d9cf4e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d6d1b23d.js",
-    "static/js/2.5e66baaa.chunk.js",
-    "static/css/main.07ec13ec.chunk.css",
-    "static/js/main.c3077e57.chunk.js"
+    "static/js/2.48d9cf4e.chunk.js",
+    "static/css/main.b8995bf4.chunk.css",
+    "static/js/main.0fa57fa3.chunk.js"
   ]
 }
