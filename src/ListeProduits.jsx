@@ -5,30 +5,55 @@ import instanceFirebase from 'firebase/app';
 import "firebase/firestore";
 
 // Code pour intégrer Firebase temporairement placé ici
+// Tout ce code sera organisé adéquatement dans des fichiers/hooks séparés
 
-// Configuration du projet FB
+// Étape 1 : Objet de configuration pour utiliser les produits FB
 const firebaseConfig = {
-  apiKey: "AIzaSyBAB1bpsWFNArALnECEKBRvNvkucnWE3eA",
-  authDomain: "panier-achats-react.firebaseapp.com",
-  databaseURL: "https://panier-achats-react-default-rtdb.firebaseio.com",
-  projectId: "panier-achats-react",
-  storageBucket: "panier-achats-react.appspot.com",
-  messagingSenderId: "1061179620791",
-  appId: "1:1061179620791:web:d61b330e1cda1a773d7c32",
-  measurementId: "G-MHHR9EPPGB"
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
 };
 
-// Obtenir une instance de l'API Firebase
+// Étape 2 : Obtenir une instance de l'API Firebase
 if(!instanceFirebase.apps.length) {
   instanceFirebase.initializeApp(firebaseConfig);
 }
 
-// Obtenir une instance de la BD Firestore.
-const bd = instanceFirebase.firestore;
+// Étape 3 : Obtenir une instance de la BD Firestore.
+const bd = instanceFirebase.firestore();
 
-// AJAX et donc Promise et donc Async (à compléter au prochain cours)
-// let mesProduits =  bd.collection("produits").get();
+// Étape 4 : Quelques exemples d'écriture et de lecture de données
 
+// Exemple 1 : ajouter tous les produits du fichiers JSON dans la collection "produits" sur Firestore.
+tabProduits.forEach(
+  prd => {
+    let refObjAjoute = bd.collection("produits").add(prd).then(
+      refDoc => console.log("Le document est ajouté avec Identifiant : ", refDoc.id)
+    )
+  }
+);
+
+// Exemple 2 : Chercher des documents dans une collection
+bd.collection("produits").where("prix", ">", 15).get().then(
+  reponse =>  reponse.forEach(
+    article => console.log("Produit plus cher que 15$ : ", article.data())
+  )
+);
+
+// Exemple 3 : Observer une collection
+// Pas le bon cas d'utilisation évidement, mais juste pour montrer la fonctionnalité
+bd.collection("produits").onSnapshot(
+  snapshot => snapshot.docChanges().forEach(
+    changement => {
+      if(changement.type == "added") {
+        console.log(changement.doc.data());
+      }
+    }
+  )
+)
 
 function ListeProduits(props) {
   //console.log("Panier dans ListeProduits", props.etatPanier);
